@@ -1,0 +1,386 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilo del menú de navegación */
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navigation-menu button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.navigation-menu button:hover {
+    background-color: #0056b3;
+}
+
+.navigation-menu button:focus {
+    outline: none;
+    background-color: #003f7f;
+}
+
+/* Alinear a la izquierda los párrafos dentro del contenedor */
+.container p {
+    text-align: left;
+}
+
+.descripcion, .precondiciones, .pasos, .resultados, .entorno {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.file-upload {
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+}
+
+.file-upload label {
+    cursor: pointer;
+}
+
+.file-upload small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-button,
+.clear-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-button {
+    background: #dc3545;
+}
+
+/* Título de la galería */
+.gallery-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0d47a1;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* Contenedor de la galería */
+.gallery-container {
+    display: flex;
+    flex-direction: column; /* Configura los elementos en columna */
+    gap: 15px;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Elementos de la galería (imágenes y videos) */
+.gallery-item {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    max-width: 800px; /* Limita el ancho máximo para no exceder */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Las imágenes y videos ocuparán el 100% del ancho disponible */
+.gallery-item img, .gallery-item video {
+    width: 100%;
+    height: auto; /* Mantiene la proporción */
+    display: block;
+    border-radius: 8px;
+}
+
+
+/* Ajuste de video para mantener proporción
+.gallery-item video {
+    max-height: 200px;
+}
+
+/* Título para Prioridad y Severidad */
+.priority-severity-title, .environment-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: left;
+}
+
+/* Contenedor para Prioridad y Severidad */
+.priority-severity-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.priority, .severity, .browser, .environment {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.priority p, .severity p, .browser p, .environment p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+/* Cuadrado amarillo para indicar "baja" */
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: #ffeb3b;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Contenedor para Navegador y Ambiente */
+.environment-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Ocultar formularios por defecto */
+.form {
+    display: none;
+}
+
+/* Estilo común para los botones */
+.navigation-menu button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Estilos para diferenciar funcional y cosmético */
+.funcional {
+    background-color: #FF5733; /* Naranja para bugs funcionales */
+}
+
+.cosmetico {
+    background-color: #4CAF50; /* Verde para bugs cosméticos */
+}
+
+/* Estilos específicos para PC y Celular */
+.pc i.fas.fa-desktop {
+    margin-left: 8px;
+}
+
+.mobile i.fas.fa-mobile-alt {
+    margin-left: 8px;
+}
+
+.navigation-menu i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+
+
+
+/* Justificación general */
+.justification-container {
+    width: 20%; /* 25% en pantallas grandes */
+    padding: 10px;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilos generales para el menú de navegación */
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+    background-color: #0b2785;
+    position: fixed; /* Menú fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajusta el espaciado de los botones en el menú */
+.navigation-menu button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Estado hover y focus para botones */
+.navigation-menu button:hover {
+    background-color: #0056b3;
+}
+
+.navigation-menu button:focus {
+    outline: none;
+    background-color: #003f7f;
+}
+
+
+
+
+/* Justificación en el lado derecho y fija */
+.justification-container {
+    /*width: 15%;  Tamaño fijo del 25% del ancho */
+    padding: 10px;
+    background-color: #f0f0f0;
+    position: absolute; /* Fija al lado derecho */
+    top: 100px; /* Alineada justo después del menú fijo */
+    /* right: 20px;*/
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 100; /* Asegura que quede por encima del contenido principal */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .justification-container {
+        position: relative; /* Cambia de posición fija a relativa */
+        width: 100%; /* Ocupa el 100% del ancho disponible */
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .justification-container {
+        width: 100%;
+        margin: 20px 0 0 0; /* Se coloca debajo del contenido principal */
+        padding: 15px;
+    }
+}
+
+
+/* Justificación en el lado derecho y fija */
+.justification-container {
+    width: 25%; /* Tamaño fijo del 25% del ancho */
+    padding: 10px;
+    background-color: #f0f0f0;
+    position: fixed; /* Fija al lado derecho */
+    right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 100; /* Asegura que quede por encima del contenido principal */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste del margen para el contenido principal para no sobreponerse con la justificación */
+.container {
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /*margin-right: 30%;  Deja espacio en el lado derecho para la justificación */
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .justification-container {
+        position: relative; /* Cambia de posición fija a relativa */
+        width: 100%; /* Ocupa el 100% del ancho disponible */
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+    }
+
+    .container {
+        margin-right: 0; /* Restablece el margen para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .justification-container {
+        width: 100%;
+        margin: 20px 0 0 0; /* Se coloca debajo del contenido principal */
+        padding: 15px;
+    }
+
+    .container {
+        margin-right: 0; /* Restablece el margen para pantallas pequeñas */
+    }
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas en Clockify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reporte de Bugs en Clockify</h1> 
+        <hr>      
+        <!-- Menú de navegación -->
+<div class="navigation-menu">
+     <!-- Funcional - Escritorio -->
+     <button class="funcional pc" onclick="showForm(1)">
+        <i class="fas fa-bug"></i><i class="fas fa-desktop"></i>Bug 1</button>
+    
+    <!-- Funional - Browser -->
+    <button class="cosmetico pc" onclick="showForm(2)">
+        <i class="fas fa-bug"></i><i class="fas fa-desktop"></i>Bug 2</button>
+    
+    <!-- Funcional - Celular -->
+    <button class="funcional mobile" onclick="showForm(3)">
+        <i class="fas fa-bug"></i><i class="fas fa-globe"></i></i>Bug 3</button>
+    
+    <!-- Funcional - Celular -->
+    <button class="cosmetico mobile" onclick="showForm(4)">
+        <i class="fas fa-bug"></i><i class="fas fa-globe"></i>Bug 4 </button>
+
+        <!-- Funcional - Celular -->
+    <button class="cosmetico mobile" onclick="showForm(5)">
+        <i class="fas fa-bug"></i><i class="fas fa-mobile-alt"></i>Bug 5 </button>
+
+         <!-- Funcional - Celular -->
+    <button class="cosmetico mobile" onclick="showForm(6)">
+        <i class="fas fa-bug"></i><i class="fas fa-mobile-alt"></i>Bug 6 </button>
+
+</div>
+
+        
+        <div class="form-container">
+            <!-- Formulario 1 -->
+            <div class="form" id="form-1">
+                <h3><i>[Registro]</i> La aplicación de escritorio de Windows se cuelga al introducir datos incorrectos en "Iniciar sesión de dominio personalizado".</h3>
+                <h3>Descripción:</h3>
+                <p class="descripcion"> Al intentar iniciar sesión en la aplicación de escritorio de Windows, se presentan comportamientos inesperados, como el bloqueo de la aplicación y la apertura de múltiples pestañas del navegador. Esto ocurre al ingresar datos incorrectos en "Iniciar sesión de dominio personalizado".</p>
+
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario instalo la aplicación de Clockify en el escritorio<br>2- El usuario debe estar previamente en la página principal de  la App de Clockify <URL><br>3- El usuario debe estar registrado en su cuenta de Clokify.</p>
+
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario selecciona el link de "Iniciar sesión de dominio personalizado".<br>2- El usuario ingresa el <Dato> incorrecto<br>3- El usuario hace click en el botón de "Enviar".</p>
+
+                <h3>Resultado Esperado:</h3>
+                <p class="resultados">1- Al ingresar datos incorrectos en "Iniciar sesión de dominio personalizado", debería aparecer un mensaje de error.<br>2- La aplicación no debería congelarse al volver a la pestaña principal.</p>
+
+                <h3>Resultado Obtenido:</h3>
+                <p class="resultados">1- No se muestra un mensaje de error al ingresar datos incorrectos en "Iniciar sesión de dominio personalizado".<br> 2- La aplicación se tranca y se abren múltiples pestañas en el navegador al intentar iniciar sesión nuevamente.</p>
+
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Alta.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Alta (Afecta la funcionalidad principal del sistema).</p>
+                    </div>
+                </div>
+
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Escritorio:</strong> Windows 10.</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+
+                <h3>Archivos Adjuntos:</h3>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="img/Bug1.png" alt="Descripción de la imagen 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Bug1A.png" alt="Descripción de la imagen 2">
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="img/Bug1s.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+                <!-- Nueva sección de Justificación -->
+                <div class="justification-container">
+                    <h3>Justificación</h3>
+                    <i><p>Prioridad Alta:</i>
+                       <strong> Interrupción del Acceso a la Aplicación:</strong> La imposibilidad de iniciar sesión en la aplicación de escritorio de Windows representa un obstáculo significativo para los usuarios. Dado que este es un paso fundamental para acceder a todas las funcionalidades de la aplicación, la solución debe ser prioritaria para evitar que los usuarios queden bloqueados.</p><br><i>Severidad Alta:</i><strong> Comportamiento Inesperado de la Aplicación: </strong>La aplicación que "se tranca" y abre múltiples pestañas en el navegador es un comportamiento anómalo y refleja fallos significativos en la estabilidad y el manejo de sesiones, lo que indica una severidad alta en la falla del sistema.
+                </div>
+            </div>
+
+              <!-- Formulario 2 -->
+              <div class="form" id="form-2" style="display:none;">
+                <h3><i>[Escritorio]</i> Lenta apertura de la aplicación de escritorio: se inicia en el navegador antes de abrirse en la PC.</h3>
+                <h3>Descripción:</h3>
+                <p class="descripcion">Al intentar iniciar la aplicación de escritorio, primero se abre en un navegador y luego tarda en abrirse en la PC.</p>
+            
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario instalo la aplicación de Clockify en el escritorio<br>2- El usuario debe estar previamente en la página principal de  la App de Clockify <URL><br>3- El usuario debe estar registrado en su cuenta de Clokify.</p>
+            
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario hace click en el botón "Iniciar Sesión"<br> 2- El usuario hace click en el botón de "Continuar con Google"<br> 3- El usuario ingresa el código de verificación recibido en su correo.
+                    </p>
+            
+                <h3>Resultado Esperado:</h3>
+                <p class="resultados">La aplicación de escritorio debería abrirse directamente y de manera rápida sin pasar por el navegador.</p>
+            
+                <h3>Resultado Obtenido:</h3>
+                <p class="resultados">La aplicación se abre primero en el navegador y luego tarda en abrirse en la PC, lo que genera confusión y afecta la usabilidad.</p>
+            
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Baja.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Baja.</p>
+                    </div>
+                </div>
+            
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Escritorio:</strong> Windows 10</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+            
+                <h3>Archivos Adjuntos:</h3>
+<div class="gallery-container">
+    
+    <div class="gallery-item">
+        <video controls>
+            <source src="img/Bug2.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+</div>
+
+                <!-- Nueva sección de Justificación -->
+                <div class="justification-container">
+                    <h3>Justificación</h3>
+                    <i><p>Prioridad Baja:</i>
+                       <strong> Impacto en la funcionalidad principal: </strong>Aunque este problema genera una experiencia de usuario inconveniente, no impide el uso de la aplicación ni afecta sus funciones principales. Los usuarios aún pueden acceder a la aplicación y realizar las tareas necesarias, aunque con un retraso temporal.</p><br><br><i>Severidad Baja:</i><strong> Impacto en la usabilidad: </strong> Debido al impacto negativo en la usabilidad y experiencia de usuario, aunque no impide el funcionamiento de la herramienta.
+                </div>
+            </div>
+
+            <!-- Formulario 4 -->
+            <div class="form" id="form-4" style="display:none;">
+                <h3><i>[Proyectos]</i> Inconsistencia en el guardado de notas de la sección de "Proyectos" al cambiar a la sección "Equipo".</h3>
+                <h3>Descripción</h3>
+    <p class="descripcion">Al seleccionar un proyecto y agregar una nota en la sección de "Proyectos", al cambiar a la pestaña "Equipo", a veces la nota no se guarda correctamente. Esta inconsistencia provoca que las notas se pierdan en algunos casos, aunque en otras ocasiones se guardan sin problemas.
+
+    </p>
+
+    <h3>Precondiciones:</h3>
+    <p class="precondiciones">1- El usuario debe estar previamente en la página principal de Clockify</URL><br> 2- El usuario previamente inicia sesión. <br> El usuario se encuentra previamente en la seccion "Espacio de trabajo"</p>
+
+    <h3>Pasos:</h3>
+    <p class="pasos">1- El usuario hace click en la sección "Proyectos".<br>2- El usuario hace click en la sección "Nota" de proyectos <br>3- El usuario ingresa los <Datos> que desee. <br>4- El Usuario cambia de sección a "Equipo" </p>
+
+    <h3>Resultado Esperado</h3>
+    <p class="resultados">La nota agregada en el proyecto debería guardarse correctamente al cambiar entre la sección "Equipo" y la sección de "Proyectos".</p>
+
+    <h3>Resultado Obtenido</h3>
+    <p class="resultados">Al cambiar a la pestaña "Equipo" y regresar, a veces la nota se pierde y no se muestra en el proyecto, aunque en otras ocasiones se guarda correctamente.</p>
+
+    <h3>Detalles del Problema:</h3>
+    <div class="priority-severity-container">
+        <div class="priority">
+            <div class="indicator"></div>
+            <p><strong>Prioridad:</strong> Media.</p>
+        </div>
+        <div class="severity">
+            <div class="indicator"></div>
+            <p><strong>Severidad:</strong> Media.</p>
+        </div>
+    </div>
+
+    <h3>Entorno:</h3>
+    <div class="environment-container">
+        <div class="browser">
+            <p><strong>Navegador:</strong> Google Chrome v192.</p>
+        </div>
+        <div class="environment">
+            <p><strong>Ambiente:</strong> Producción.</p>
+        </div>
+    </div>
+
+    <h3>Archivos Adjuntos:</h3>
+    <div class="gallery-container">
+        
+        <div class="gallery-item">
+            <img src="img/Traduccion.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="gallery-item">
+            <video controls>
+                <source src="img/Nota.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </div>
+       <!-- Nueva sección de Justificación -->
+       <div class="justification-container">
+        <h3>Justificación</h3>
+        <p><i><p>Prioridad Media:</i>
+            <strong> Interrupción del Acceso a la Aplicación:</strong> Dado que la inconsistencia en el guardado de notas no ocurre en todos los casos, los usuarios pueden trabajar con la funcionalidad de notas con cierta regularidad. Esto sugiere que el problema puede ser más manejable y menos urgente que un error crítico que impida el uso de la aplicación.<br><br><i>Severidad Media:</i><strong> La inconsistencia en el guardado de notas:</strong> puede llevar a la pérdida de información valiosa. Aunque no afecta la funcionalidad esencial de la aplicación, la pérdida de datos puede ser un inconveniente significativo para los usuarios que dependen de las notas para el seguimiento de proyectos.</p>
+    </div>
+            </div>
+
+            <!-- Formulario 3 -->
+            <div class="form" id="form-3" style="display:none;">
+                <h3><i>[Registro]</i> El sistema permite el registro con un correo ya existente.</h3>
+                <h3>Descripción:</h3>
+                <p class="descripcion">Al intentar registrar un nuevo usuario con un correo electrónico que ya está registrado en el sistema, Clockify no muestra un mensaje de error adecuado, permitiendo que el proceso de registro avance en lugar de detenerse y advertir al usuario.
+
+                </p>
+            
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario debe estar previamente en la página principal de Clockify</URL> <br>2- El usuario registro el correo electrónico previamente en el sistema <mail>. <br>2- El usuario no debe haber iniciado sesión.</p>
+            
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario hace click en el botón de "Registrarte Gratis".<br>2- El usuario ingresa el correo electrónico en "Introduce correo electrónico" <mail>.<br>3- El usuario tilda condiciones de uso en <i>"Acepto CAKE.com Suite | Productivity Tools for Businesses  Condiciones de Uso"</i>. <br>4- El usuario hace click en el botón de "Continuar con correo electrónico"</p>
+            
+                <h3>Resultado Esperado:</h3>
+                <p class="resultados">El sistema debería mostrar un mensaje de error indicando que el correo electrónico ya está en uso, como por ejemplo: "El correo electrónico ingresado ya está registrado. Por favor, usa otro correo o intenta recuperar tu contraseña".</p>
+            
+                <h3>Resultado Obtenido</h3>
+                <p class="resultados">El sistema permite avanzar al siguiente paso del registro sin mostrar ningún mensaje de error.
+
+                </p>
+            
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Media.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Media.</p>
+                    </div>
+                </div>
+            
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Navegador:</strong> Google Chrome v192.</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+            
+                <h3>Archivos Adjuntos:</h3>
+                <div class="gallery-container">
+                   
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="img/Bug3a.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+                <!-- Nueva sección de Justificación -->
+                <div class="justification-container">
+                    <h3>Justificación</h3>
+                    <i><p>Prioridad Media:</i>
+                       <strong> Flujo Importante:</strong> El registro es un proceso crítico, especialmente para usuarios nuevos. Un fallo en esta etapa afecta la captación de nuevos usuarios, lo que puede tener implicaciones a nivel empresarial.</p><br><br><i>Severidad Media: </i><strong> Fallo funcional:</strong> El error, aunque no causa fallos críticos, es funcional y no solo un aspecto visual o cosmético.
+                </div>
+            </div>
+          
+
+            <!-- Formulario 5 -->
+            <div class="form" id="form-5" style="display:none;">
+                <h3><i>[Contador de Tiempo]</i> Mal funcionamiento del cronómetro automático en "contador de tiempo": validación incorrecta "tarea no pertenece a proyecto".</h3>
+                <h3>Descripción</h3>
+                <p class="descripcion">Al intentar correr el cronómetro automático en ciertos proyectos, aparece el mensaje de error "tarea no pertenece a proyecto". Sin embargo, después de cambiar a otro proyecto y luego volver al original, el cronómetro funciona. Además, al correr el cronómetro en un proyecto sin asignación, se inicia en un proyecto diferente.
+
+                </p>
+
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario debe instalar previamente la aplicación de Clockify en el celular. <br>2- El usuario debe estar previamente en la página principal de la App de Clockify <br>3- El usuario debe estar registrado en su cuenta de Clokify. <br>4- El usuario debe estar previamente en la sección de "Contador de Tiempo".</p></p>
+
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario hace click en el proyecto con tiempo <999:00:00>.<br>2- El usuario hace click en el ícono de "Reproducción" del proyecto seleccionado.</p>
+
+                <h3>Resultado Esperado:</h3>
+                <p class="resultados">El cronómetro automático debería iniciarse sin errores para el proyecto seleccionado.
+                </p>
+
+                <h3>Resultado Obtenido</h3>
+                <p class="resultados">Al intentar iniciar el cronómetro automático en el proyecto seleccionado, a veces aparece un mensaje de error indicando "Tarea no pertenece a proyecto". Sin embargo, al cambiar a otro proyecto y regresar, el cronómetro funciona correctamente. Además, en ocasiones, el cronómetro se inicia en un proyecto diferente sin asignación.
+                </p>
+
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Alta.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Media.</p>
+                    </div>
+                </div>
+
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Celular:</strong> Android.</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+
+                <h3>Archivos Adjuntos:</h3>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="img/0.png" alt="Descripción de la imagen 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/1.png" alt="Descripción de la imagen 2">
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="img/di.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+                 <!-- Nueva sección de Justificación -->
+         <div class="justification-container">
+            <h3>Justificación</h3>
+            <p><i><p>Prioridad Alta:</i>
+                <strong>Impacto en la experiencia del usuario:</strong> Este bug afecta directamente a la funcionalidad principal de Clockify, que es el registro de tiempo mediante el cronómetro. Si los usuarios no pueden iniciar correctamente el cronómetro o si este se asigna a un proyecto incorrecto, puede haber errores en la facturación, la planificación y el control del tiempo, lo cual es crítico en una herramienta de gestión de tiempo.<br><br><i>Severidad Media:</i><strong> Gravedad del error en términos técnicos:</strong> A pesar de que el bug afecta un flujo principal, no causa fallos catastróficos ni pérdidas de datos significativas. El problema es más bien de consistencia en el comportamiento del cronómetro, lo que lo convierte en un bug de severidad media.</p>
+        </div>
+            </div>
+
+            
+
+            <!-- Formulario 6 -->
+            <div class="form" id="form-6" style="display:none;">
+                <h3><i>[Espacio de Trabajo]</i>  Problemas de mala traducción en la aplicación como por ejemplo del "Inglés a Español>".</h3>
+                <h3>Descripción:</h3>
+                <p class="descripcion">Al cambiar el idioma de la aplicación de inglés a español, algunas palabras y frases de la interfaz permanecen en inglés en lugar de traducirse correctamente al español y viceversa. Esto afecta la consistencia de la experiencia de usuario y puede causar confusión.</p>
+            
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario debe instalar previamente la aplicación de Clockify en el celular. <br>2- El usuario debe estar previamente en la página principal de la App de Clockify <br>3- El usuario debe estar registrado en su cuenta de Clokify. <br>4- El usuario debe estar previamente en la sección de "Contador de Tiempo".</p>
+            
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario hace click en el "menú hamburguesa". <br>2- El usuario hace click en el ícono de "Ajustes".<br> 3- El usuario hace click en "Idioma". <br>4- El usuario hace click en el idioma a seleccionar<Idioma>.</p>
+            
+                <h3>Resultado Esperado</h3>
+                <p class="resultados">Todos los textos de la interfaz de usuario deben estar traducidos al español tras el cambio de idioma.</p>
+            
+                <h3>Resultado Obtenido:</h3>
+                <p class="resultados">Algunas palabras permanecen en inglés, incluso después de cambiar el idioma a español. Ejemplos de palabras no traducidas:<br>"Wed" (Wednesday) sigue apareciendo en lugar de "Miércoles".<br>"Time Tracked" sigue apareciendo en lugar de "Seguimiento del Tiempo".</p>         
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Media.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Alta.</p>
+                    </div>
+                </div>
+            
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Celular:</strong> Android.</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+            
+                <h3>Archivos Adjuntos:</h3>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="img/Traducir.png" alt="Descripción de la imagen 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Traducir1.png" alt="Descripción de la imagen 2">
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="img/Traduccion.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+                <!-- Nueva sección de Justificación -->
+                <div class="justification-container">
+                    <h3>Justificación</h3>
+                    <i><p>Prioridad Media:</i>
+                       <strong> Impacto en la experiencia del usuario: </strong>Aunque el error no afecta la funcionalidad directa de la aplicación, afecta significativamente la experiencia de usuario, especialmente para aquellos que dependen de la interfaz en español. Este tipo de inconsistencias puede generar confusión y falta de confianza en el sistema.</p><br><i>Severidad Alta:</i><strong> Impacto en la usabilidad:  </strong> Porque impacta la usabilidad y accesibilidad para usuarios que dependen de la traducción correcta del idioma.
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <script src="const.js"></script>
+</body>
+
+</html>
